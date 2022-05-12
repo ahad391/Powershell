@@ -1,0 +1,8 @@
+###Update Gallary image to VMSS.
+
+
+
+###Set the subscription before running update command.
+
+az account set --subscription 04240569-0d3d-4dea-a2ce-3fecd160de06
+az vmss update --resource-group $RG --name NDUW-MASTER-EMAIL-SMS-VMSS --set virtualMachineProfile.storageProfile.imageReference.id=/subscriptions/04240569-0d3d-4dea-a2ce-3fecd160de06/resourceGroups/NDUW-IMAGES-RG-V2/providers/Microsoft.Compute/galleries/NDUW_GALLERY_PROD/images/NDUW-MASTER-DATA-VMSS/versions/0.0.1

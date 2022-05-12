@@ -1,0 +1,14 @@
+##Disk Encryption Steps:
+
+az account set --subscription "Subscription Name"
+$VMNAME="VM Name"
+$RGNAME="RG Name"
+$KEYVAULTNAME="Key-Vault"
+az vm encryption enable --resource-group ${RGNAME} --name ${VMNAME} --disk-encryption-keyvault ${KEYVAULTNAME} --encrypt-format-all --volume-type ALL
+az vm encryption show --name ${VMNAME} --resource-group ${RGNAME} --query "substatus" -o table
+
+
+
+
+
+
